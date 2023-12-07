@@ -61,8 +61,7 @@
               <button class="menu-toggle" aria-controls="header-menu-transparent" aria-expanded="false"><i class="fas fa-bars"></i></button>
     <div class="header-menu-transparent"><ul id="header-menu-transparent" class="menu"><li id="menu-item-52" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-52"><a href="index.html#how-it-works" aria-current="page">How It Works</a></li>
 <li id="menu-item-53" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-53"><a href="index.html#about" aria-current="page">About Us</a></li>
-<li id="menu-item-264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-264"><a href="blog/index.html">Blog</a></li>
-</ul></div>      <div class="site-header-cta-alt-wrap"><a class="site-header-button" href="index.html#get-cash-offer">Get Your Cash Offer</a></div>    </nav><!-- #site-navigation -->
+</ul></div>          </nav><!-- #site-navigation -->
 
 
   </div><!-- .site-header-wrap -->
@@ -119,30 +118,100 @@
 				</div>
 				<div class="elementor-element elementor-element-44a10b5 rei-form-style rei-form-style-vertical elementor-widget elementor-widget-shortcode" data-id="44a10b5" data-element_type="widget" data-widget_type="shortcode.default">
 				<div class="elementor-widget-container">
-					<div class="elementor-shortcode">        <div id="lead_form"></div>
+					<div class="elementor-shortcode">
 
-<script src=https://cdn.reiconversion.com/embed/v1.js type="text/javascript" charset="utf-8"></script>
+						<head>
+    <title>Your Page Title</title>
+    <style>
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="site-header-cta-alt-wrap">
+    <a class="site-header-button" href="javascript:void(0)" onclick="document.getElementById('myModal').style.display='block'">Get Your Cash Offer</a>
+</div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="contact_form.html" style="width:100%; height:100%;"></iframe>
+    </div>
+</div>
 
 <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        var modal = document.getElementById("myModal");
+        var btn = document.querySelector(".site-header-button");
+        var span = document.getElementsByClassName("close")[0];
 
-  (function(Rei) {
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
 
-    var rei = Rei();
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
 
-    var form = rei.sellerLeadForm({
-
-      form_id: '6k48k',
-
-      appearance: {layout: 'vertical', skin: 'default'}
-
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     });
-
-    form.mount(document.getElementById('lead_form'));
-
-  })(window.Rei);
-
 </script>
-        </div>
+
+</body>
+
+
+
+
+						<!-- <div id="lead_form"></div>
+						<script src= "./assets/lead-form.js" type="text/javascript" charset="utf-8"></script>
+						<script>
+							(function (Rei) {
+								var rei = Rei();
+								var form = rei.sellerLeadForm({
+									form_id: '6k48k',
+									appearance: { layout: 'vertical', skin: 'default' }
+								});
+								form.mount(document.getElementById('lead_form'));
+							})(window.Rei);
+						</script>
+        </div> --> 
 				</div>
 				</div>
 					</div>
