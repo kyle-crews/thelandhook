@@ -3,7 +3,7 @@ document.getElementById('changeImageButton').addEventListener('click', function(
     displayedImage.style.opacity = '0';
 
     setTimeout(function() {
-        displayedImage.src = 'another-image-url.jpg'; // Replace with new image URL
+        displayedImage.src = './image.jpg'; // Replace with new image URL
         displayedImage.style.opacity = '1';
     }, 500);
 });
